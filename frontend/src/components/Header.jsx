@@ -1,13 +1,13 @@
-import './Header.css'
+import "./Header.css";
 
 function Header() {
     return (
-        <div className = "contenedorHeader">
-            <span>
-                Trooking
-            </span>
+        <div className="Page">
+            <div className="containerScreen">
+                <span>Trooking</span>
+            </div>
         </div>
-    )
+    );
 }
 
-export default Header
+export default Header;
