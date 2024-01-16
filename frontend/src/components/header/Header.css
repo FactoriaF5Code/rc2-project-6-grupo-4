@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --greyButton: #747070;
+    --pulseButton: #a8a2a2;
+    --blueHeader: #0F4FCC;
+    --blackText: #000000;
+}
+
+.containerHeader {
+    background-color: var(--blueHeader);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.buttonMisReservas {
+    width: 131px;
+    height: 41px;
+    flex-shrink: 0;
+    background-color: var(--pulseButton);
+    color: var(--blackText);
+
+}
+
+.buttonMisReservas:hover {
+    background-color: var(--greyButton);
+    color: var(--blackText);
+}
