@@ -1,6 +1,6 @@
-import "./Header.css";
+import "./Page.css";
 
-function Header() {
+function Page() {
     return (
         <div className="Page">
             <div className="containerScreen">
@@ -10,4 +10,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Page;
