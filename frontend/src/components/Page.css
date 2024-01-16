@@ -8,14 +8,8 @@
 .Page {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100vh;
-    background: #474749;
+    background: #afafb4;
 }
 
-.containerScreen {
-    width: 390px;
-    height: 844px;
-    background: #f4f4f6;
-}
