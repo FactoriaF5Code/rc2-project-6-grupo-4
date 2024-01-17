@@ -1,20 +1,46 @@
 article.containerCard {
   width: 90%;
-  height: 261px;
   background-color: var(--pulseButton);
+  padding: 1rem;
+  position: relative;
 }
 
 .cardHotel {
   display: flex;
 }
 
+.cardHotel h3{
+  font-size: large;
+}
+
+p.description {
+font-size: 1.5rem;
+
+}
+
+p.price {
+  font-size: 1.2rem;
+}
 .dataHotel {
   display: flex;
   flex-direction: column;
+  justify-content: space-between ;
+  padding: 1rem;
 }
 
 img {
   width: 169px;
   height: 231px;
   object-fit: cover;
+}
+.bton{
+  position: absolute;
+  top: 85%;
+  left: 75%;
+  padding: 0.5rem;
+  border:  none;
+  background-color: var(--greyButton);
+  color: var(--whiteText);
+  
+
 }
