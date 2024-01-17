@@ -1,0 +1,20 @@
+article.containerCard {
+  width: 90%;
+  height: 261px;
+  background-color: var(--pulseButton);
+}
+
+.cardHotel {
+  display: flex;
+}
+
+.dataHotel {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 169px;
+  height: 231px;
+  object-fit: cover;
+}

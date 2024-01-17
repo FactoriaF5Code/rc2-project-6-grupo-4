@@ -4,3 +4,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --greyButton: #747070;
+  --pulseButton: #a8a2a2;
+  --blueHeader: #0f4fcc;
+  --blackText: #000000;
+}
