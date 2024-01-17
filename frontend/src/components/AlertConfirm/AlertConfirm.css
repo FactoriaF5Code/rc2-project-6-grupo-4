@@ -1,0 +1,8 @@
+.containerAlert{
+    background-color:var(--greenAlert)
+
+}
+
+.alerta{
+  color: var(--blackText)
+}
