@@ -23,7 +23,7 @@ export const Card = ({ ...hotel }) => {
           <p className="price" style={{ color: priceColor }}>Precio por noche: {hotel.pricePerNight} €{msgPrice}</p>
         </div>
       <IconButton color="primary" aria-label="add to shopping cart">
-        <Button className="bton" size="large" variant="contained">Reservar!<AddShoppingCartIcon /></Button>
+        <Button className="bton" size="large" variant="contained">Reservar!<AddShoppingCartIcon style={{ marginLeft: '1rem' }}/></Button>
       </IconButton>
       </div>
     </article>
