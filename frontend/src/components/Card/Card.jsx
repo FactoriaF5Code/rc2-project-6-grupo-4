@@ -1,5 +1,7 @@
 import './Card.css';
-import { Button } from '@mui/base';
+import { Button, IconButton } from '@mui/material';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 export const Card = ({ ...hotel }) => {
 
   let priceColor = 'black';
@@ -20,8 +22,10 @@ export const Card = ({ ...hotel }) => {
           <p className="description">{hotel.description}</p>
           <p className="price" style={{ color: priceColor }}>Precio por noche: {hotel.pricePerNight} €{msgPrice}</p>
         </div>
+      <IconButton color="primary" aria-label="add to shopping cart">
+        <Button className="bton" size="large" variant="contained">Reservar!<AddShoppingCartIcon /></Button>
+      </IconButton>
       </div>
-          <Button className="bton" size="small" style={{fontSize:"1rem"}}>Reservar!</Button>
     </article>
   );
 };
