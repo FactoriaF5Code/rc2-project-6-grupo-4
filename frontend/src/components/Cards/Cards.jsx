@@ -5,7 +5,7 @@ import { Card } from '../Card/Card';
 
 
 
-export const Cards = ({ onReservationConfirm }) => {
+export const Cards = () => {
   const [hotels, setHotels] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export const Cards = ({ onReservationConfirm }) => {
   return (
     <section className='containerCards'>
       {hotels.map((hotel) => (
-        <Card key={hotel.id} {...hotel} onReservationConfirm={onReservationConfirm} />
+        <Card key={hotel.id} {...hotel}/>
       ))}
     </section>
   );

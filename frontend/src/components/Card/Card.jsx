@@ -2,11 +2,15 @@ import './Card.css';
 import { useState } from 'react';
 import { Button, IconButton, Dialog, DialogTitle, DialogContent, TextField } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import AlertConfirmation from "../AlertConfirm/AlertConfirm";
 
 const Card = ({ ...hotel }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [checkInDate, setCheckInDate] = useState('');
   const [checkOutDate, setCheckOutDate] = useState('');
+  const [reservationInfo, setReservationInfo] = useState(null);
+  
 
   const handleReserverClick = () => {
     setIsModalOpen(true);
@@ -20,10 +24,23 @@ const Card = ({ ...hotel }) => {
   const handleReserveConfirm = () => {
     console.log('Check-in Date:', checkInDate);
     console.log('check-out Date:', checkOutDate);
-
+  
+    const newReservationInfo = {
+      hotel: hotel,
+      checkInDate: checkInDate,
+      checkOutDate: checkOutDate,
+    };
+  
+    setReservationInfo(newReservationInfo);
     setIsModalOpen(false);
-    onReservationConfirm(hotel.name, checkInDate, checkOutDate);
+    setIsAlertOpen(true); // Mostrar el componente AlertConfirmation
   };
+  
+
+  const handleAlertClose = () => {
+    setIsAlertOpen(false);  // Oculta el componente AlertConfirmation
+  };
+
 
   let priceColor = 'black';
   let msgPrice = '';
@@ -48,16 +65,16 @@ const Card = ({ ...hotel }) => {
         </IconButton>
       </div>
 
-      <Dialog open={isModalOpen} onClose={handleModalClose}>
-        <DialogTitle>{`Reserva en${hotel.name}`}</DialogTitle>
-        <DialogContent>
+      <Dialog open={isModalOpen} onClose={handleModalClose} classes={{ paper: 'custom-dialog-paper' }}>
+        <DialogTitle style={{ fontSize: '2rem' }}>{`Reserva en ${hotel.name}`}</DialogTitle>
+        <DialogContent style={{ fontSize: '1.8rem' }}>
           <TextField
             label="Fecha de Entrada"
             type='date'
             value={checkInDate}
             onChange={(e) => setCheckInDate(e.target.value)}
             InputLabelProps={{ shrink: true }}
-            style={{ marginBottom: '1rem' }}
+            style={{ marginBottom: '1rem', fontSize: '2rem', width: '100%', height: '50%' }}
           />
           <TextField
             label="Fecha de salida"
@@ -65,10 +82,16 @@ const Card = ({ ...hotel }) => {
             value={checkOutDate}
             onChange={(e) => setCheckOutDate(e.target.value)}
             InputLabelProps={{ shrink: true }}
+            style={{ fontSize: '2rem', width: '100%', height: '50%' }}
           />
-          <Button onClick={handleReserveConfirm}>Confirmar Reserva</Button>
+
+          <Button style={{ fontSize: '1.8rem' }} onClick={handleReserveConfirm}>
+            Confirmar Reserva
+          </Button>
         </DialogContent>
       </Dialog>
+      {isAlertOpen && <AlertConfirmation reservationInfo={reservationInfo} onClose={handleAlertClose} />}
+
     </article>
   );
 };
