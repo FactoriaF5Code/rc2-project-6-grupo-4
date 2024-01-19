@@ -10,13 +10,13 @@ export const Footer = () => {
     <footer>
       <section className='containerFooter'>
         <Link href='https://www.twitter.com' target='_blank'>
-          <XIcon style={{ color: 'white' }} />
+          <XIcon sx={{ fontSize: 60 }} style={{ color: 'white' }} />
         </Link>
         <Link href='https://www.instagram.com' target='_blank'>
-          <InstagramIcon style={{ color: 'white' }} />
+          <InstagramIcon sx={{ fontSize: 60 }} style={{ color: 'white' }} />
         </Link>
         <Link href='https://www.facebook.com' target='_blank'>
-          <FacebookIcon style={{ color: 'white' }} />
+          <FacebookIcon sx={{ fontSize: 60 }} style={{ color: 'white' }} />
         </Link>
       </section>
     </footer>

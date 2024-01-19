@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
+  
 }
 
 :root {
   --greyButton: #747070;
-  --pulseButton: #a8a2a2;
-  --blueHeader: #0f4fcc;
+  --pulseButton: #dfd3d3c8;
+  --blueHeader: #2d5993;
   --blackText: #000000;
   --whiteText: #fff;
   --greenAlert: #389538;

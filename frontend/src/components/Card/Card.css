@@ -10,17 +10,23 @@ article.containerCard {
   position: relative;
 }
 
-.cardHotel h3{
-  font-size: large;
+
+.cardHotel h2{
+  font-size: 3.5rem;
+  -webkit-text-stroke: 1px black;
 }
 
 p.description {
-font-size: 1.5rem;
-
+font-size: 2.9rem;
+-webkit-text-stroke: 1px black;
 }
-
 p.price {
-  font-size: 1.2rem;
+    font-size: 3.2rem;
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }
 .dataHotel {
   width: 70%;
@@ -31,7 +37,7 @@ p.price {
 }
 
 img {
-  width: 169px;
+  width: 340px;
   height: 231px;
   object-fit: cover;
 }

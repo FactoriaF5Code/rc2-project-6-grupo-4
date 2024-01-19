@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card } from '../Card/Card';
 
-export const Cards = () => {
+
+
+export const Cards = ({ onReservationConfirm }) => {
   const [hotels, setHotels] = useState([]);
 
   useEffect(() => {
@@ -17,7 +19,7 @@ export const Cards = () => {
   return (
     <section className='containerCards'>
       {hotels.map((hotel) => (
-        <Card key={hotel.id} {...hotel} />
+        <Card key={hotel.id} {...hotel} onReservationConfirm={onReservationConfirm} />
       ))}
     </section>
   );

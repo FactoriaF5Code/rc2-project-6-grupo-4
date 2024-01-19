@@ -1,8 +1,20 @@
-.containerAlert{
-    background-color:var(--greenAlert)
-
+.containerAlertConfirm {
+  display: flex;
+  justify-content: center;
+}
+.containerAlert {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(99, 159, 99, 0.754);
+  height: 10rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-.alerta{
-  color: var(--blackText)
+.alerta {
+  color: var(--blackText);
+  font-size: 4rem;
 }

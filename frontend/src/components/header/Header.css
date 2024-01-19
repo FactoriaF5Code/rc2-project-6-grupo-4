@@ -6,6 +6,7 @@
   height: 80px;
   padding-left: 50px;
   padding-right: 50px;
+  margin-bottom: 5rem;
 }
 
 .buttonMisReservas {
@@ -19,4 +20,9 @@
 .buttonMisReservas:hover {
   background-color: var(--greyButton);
   color: var(--blackText);
+}
+
+.logo {
+  height: 60px;
+  
 }
