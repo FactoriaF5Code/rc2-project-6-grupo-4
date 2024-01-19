@@ -1,0 +1,28 @@
+.containerHeader {
+  background-color: var(--blueHeader);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 5rem;
+}
+
+.buttonMisReservas {
+  width: 131px;
+  height: 41px;
+  flex-shrink: 0;
+  background-color: var(--pulseButton);
+  color: var(--blackText);
+}
+
+.buttonMisReservas:hover {
+  background-color: var(--greyButton);
+  color: var(--blackText);
+}
+
+.logo {
+  height: 60px;
+  
+}
